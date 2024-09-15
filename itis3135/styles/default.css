@@ -17,7 +17,7 @@ header {
 h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #4a6d4f;
+    color: hsl(190, 29%, 23%); 
 }
 
 header p {
@@ -57,7 +57,7 @@ main {
 
 h2 {
     margin-top: 0;
-    color: #4a6d4f;
+    color: #4a8f8a; 
     font-size: 2em;
 }
 
@@ -66,10 +66,10 @@ section {
 }
 
 h3 {
-    border-bottom: 3px solid #4a6d4f;
+    border-bottom: 3px solid #4a8f8a; 
     padding-bottom: 10px;
     margin-bottom: 15px;
-    color: #4a6d4f;
+    color: #4a8f8a; 
     font-size: 1.5em;
 }
 
