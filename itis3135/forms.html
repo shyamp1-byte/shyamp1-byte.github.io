@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panther Express - Company Form</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #5d473a;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    form {
+      margin: 20px 0;
+      padding: 10px;
+      background-color: #f4f1e3;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      max-width: 600px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], select {
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .inline-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .inline-group label {
+      display: inline-block;
+      margin-right: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      background-color: #5d473a;
+      color: #f4f1e3;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3d2e27;
+    }
+    button[type="reset"] {
+      background-color: #7b5d48;
+    }
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+      </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>Comapany Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Phone number format: 123-456-7890">
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+            <label>Services Interested In:</label>
+            <input type="checkbox" id="service1" name="service" value="Standard Delivery">
+            <label for="service1">Standard Delivery</label><br>
+            <input type="checkbox" id="service2" name="service" value="Express Delivery">
+            <label for="service2">Express Delivery</label><br>
+            <input type="checkbox" id="service3" name="service" value="Same-Day Delivery">
+            <label for="service3">Same-Day Delivery</label>
+      
+            <label>Package Size:</label>
+            <input type="radio" id="small" name="package_size" value="Small" required>
+            <label for="small">Small</label><br>
+            <input type="radio" id="medium" name="package_size" value="Medium">
+            <label for="medium">Medium</label><br>
+            <input type="radio" id="large" name="package_size" value="Large">
+            <label for="large">Large</label>
+      
+            <label for="shipping">Preferred Shipping Speed:</label>
+            <select id="shipping" name="shipping" required>
+              <option value="" disabled selected>Select a shipping speed</option>
+              <option value="standard">Standard (3-5 business days)</option>
+              <option value="express">Express (1-2 business days)</option>
+              <option value="overnight">Overnight</option>
+            </select>
+      
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </form>
+      
+        </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js">
+    </script>
+</body>
+</html>
