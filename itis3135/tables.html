@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyam Pedibhotla - Company Table</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+        }
+        th, td {
+          padding: 8px 12px;
+          border: 1px solid #ddd;
+        }
+        th {
+          background-color: #5d473a; 
+          color: white;
+        }
+        tr:nth-child(even) {
+          background-color: #f2f2f2; 
+        }
+        caption {
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        footer {
+          text-align: center;
+          margin-top: 20px;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>Company Tables</h2>
+        <h3>My Tabular Data</h3>
+    <ol>
+      <li>Mickey Mouse, mickey.mouse@pantherexpress.com, 25 years</li>
+      <li>SpongeBob SquarePants, spongebob.squarepants@pantherexpress.com, 15 years</li>
+      <li>Bugs Bunny, bugs.bunny@pantherexpress.com, 30 years</li>
+      <li>Homer Simpson, homer.simpson@pantherexpress.com, 20 years</li>
+      <li>Daffy Duck, daffy.duck@pantherexpress.com, 22 years</li>
+      <li>Scooby Doo, scooby.doo@pantherexpress.com, 10 years</li>
+      <li>Patrick Star, patrick.star@pantherexpress.com, 35 years</li>
+    </ol>
+
+    <h3>Employee Data in Simple Table</h3>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Years of Service</th>
+      </tr>
+      <tr>
+        <td>Mickey Mouse</td>
+        <td>mickey.mouse@pantherexpress.com</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>SpongeBob SquarePants</td>
+        <td>spongebob.squarepants@pantherexpress.com</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>Bugs Bunny</td>
+        <td>bugs.bunny@pantherexpress.com</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>Homer Simpson</td>
+        <td>homer.simpson@pantherexpress.com</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>Daffy Duck</td>
+        <td>daffy.duck@pantherexpress.com</td>
+        <td>22</td>
+      </tr>
+      <tr>
+        <td>Scooby Doo</td>
+        <td>scooby.doo@pantherexpress.com</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>Patrick Star</td>
+        <td>patrick.star@pantherexpress.com</td>
+        <td>35</td>
+      </tr>
+    </table>
+
+    <h3>Employee Data in Complex Table</h3>
+    <table>
+      <caption>Employee Information</caption>
+      <tr>
+        <th>Department</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Years of Service</th>
+        <th>Monthly Salary</th>
+      </tr>
+      <tr>
+        <td rowspan="2">Research and Development</td>
+        <td>Mickey Mouse</td>
+        <td>mickey.mouse@pantherexpress.com</td>
+        <td>25</td>
+        <td>$5000</td>
+      </tr>
+      <tr>
+        <td>Bugs Bunny</td>
+        <td>bugs.bunny@pantherexpress.com</td>
+        <td>30</td>
+        <td>$6000</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Finance</td>
+        <td>SpongeBob SquarePants</td>
+        <td>spongebob.squarepants@pantherexpress.com</td>
+        <td>15</td>
+        <td>$4000</td>
+      </tr>
+      <tr>
+        <td>Homer Simpson</td>
+        <td>homer.simpson@pantherexpress.com</td>
+        <td>20</td>
+        <td>$4500</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Operations</td>
+        <td>Daffy Duck</td>
+        <td>daffy.duck@pantherexpress.com</td>
+        <td>22</td>
+        <td>$4800</td>
+      </tr>
+      <tr>
+        <td>Scooby Doo</td>
+        <td>scooby.doo@mpantherexpress.com</td>
+        <td>10</td>
+        <td>$3500</td>
+      </tr>
+      <tr>
+        <td>Patrick Star</td>
+        <td>patrick.star@pantherexpress.com</td>
+        <td>35</td>
+        <td>$7000</td>
+      </tr>
+      <tr>
+        <th colspan="3">Total Years of Service</th>
+        <td>157</td> 
+        <td>$34800</td> 
+      </tr>
+    </table>
+
+  </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js">
+    </script>
+</body>
+</html>
