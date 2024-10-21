@@ -48,7 +48,6 @@ nav ul li a:hover {
 
 main {
     max-width: 1200px;
-    width: 90%;
     margin: 0 auto;
     padding: 40px;
     background-color: #ffffff;
@@ -106,14 +105,12 @@ img {
     max-width: 250px;
     height: auto;
     margin: 20px auto;
-    border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
     main {
         max-width: 90%;
-        width: 95%;
         padding: 20px;
     }
 
@@ -126,7 +123,6 @@ img {
 @media (max-width: 480px) {
     main {
         max-width: 100%;
-        width: 100%;
         padding: 15px;
     }
 
@@ -134,5 +130,33 @@ img {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery .enlarge {
+    transform: scale(1.5)
+}
+
+.sitemap-image {
+    width: 100%; 
+    max-width: 800px; 
+    height: auto;
+    margin: 20px auto; 
+    display: block; 
+}
+
+.wireframe-image{
+    width: 100%; 
+    max-width: 800px; 
+    height: auto;
+    margin: 20px auto; 
+    display: block; 
 }
 

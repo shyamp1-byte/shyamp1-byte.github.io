@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview - Kriya Kitchen</title>
+    <link rel="stylesheet" href="../styles/default.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <section id="project-overview">
+            <h2>Project Overview</h2>
+            <p>Kriya Kitchen is a volunteer-run organization with the mission to raise funds to help improve the lives of those in need. The website will improve the visibility of Kriya Kitchen, helping to engage with the community and promote its services.</p>
+            <h3>Purpose of the Application</h3>
+            <p>The website is intended to provide information about Kriya Kitchen, share its mission, and a photo gallery, and more.</p>
+            <h3>Intended Users</h3>
+            <ul>
+                <li>Community members interested in volunteering</li>
+                <li>Potential donors</li>
+                <li>People looking to support local non-profits</li>
+            </ul>
+            <h3>Overview of Content</h3>
+            <p>The website will include pages on Kriya Kitchen's mission, events, volunteer opportunities, and a gallery showcasing their community work.</p>
+        </section>
+
+        <section id="client-info">
+            <h2>Client Information</h2>
+            <p><strong>Name:</strong> Kriya Kitchen</p>
+            <p><strong>Organization:</strong> Hand in Hand USA</p>
+            <p><strong>Email:</strong> raleighkriyakitchen@gmail.com</p>
+            <p><strong>Phone:</strong> 919-454-1183</p>
+        </section>
+
+        <section id="wireframe">
+            <h2>Wireframe</h2>
+            <figure>
+                <img src="../images/wireframe.png" alt="Wireframe of Kriya Kitchen site" class="wireframe-image">
+                <figcaption>Wireframe of the Kriya Kitchen Home Page</figcaption>
+            </figure>
+            <p>Link to wireframe: <a href="https://docs.google.com/document/d/1wrx1D9A6MRQfk760uKuj2w7HA3RJ5R8EVnnozoHnD4w/edit?usp=sharing">View Wireframe</a></p>
+        </section>
+
+        <section id="sitemap">
+            <h2>Site Map</h2>
+            <figure>
+                <img src="../images/Sitemap-2.jpg" alt="Site Map of Kriya Kitchen site" class="sitemap-image">
+                <figcaption>Site Map for Kriya Kitchen</figcaption>
+            </figure>
+            <p>Link to site map: <a href="https://docs.google.com/document/d/1MPIdgo720ej6yUr9iaNftXXhbEo2iUc88-vjS0lHFZ0/edit">View Site Map</a></p>
+        </section>
+
+        <section id="page-designs">
+            <h2>Page Designs</h2>
+            <ul>
+                <li><strong>Home Page</strong>
+                    <ul>
+                        <li>Purpose: Welcome users, share the mission, and provide navigation.</li>
+                        <li>Users: All visitors</li>
+                        <li>Content: Mission statement, main navigation, links to key pages.</li>
+                    </ul>
+                </li>
+                <li><strong>About Us Page</strong>
+                    <ul>
+                        <li>Purpose: Share more about Kriya Kitchen's history and team</li>
+                        <li>Users: Community members, donors, volunteers</li>
+                        <li>Content: Information about the organization's background and goals</li>
+                    </ul>
+                </li>
+                <li><strong>Menu Page</strong>
+                    <ul>
+                        <li>Purpose: Provide a  list of the available dishes and offerings from Kriya Kitchen</li>
+                        <li>Users: Community members, potential donors, and anyone interested in Kriya Kitchen's food services</li>
+                        <li>Content: Display  menu items with descriptions, prices, and categories</li>
+                    </ul>
+                </li>
+        
+                <li><strong>Events Page</strong>
+                    <ul>
+                        <li>Purpose: Showcase upcoming events and volunteer opportunities organized by Kriya Kitchen</li>
+                        <li>Users: Community members and volunteers interested in participating in or supporting events</li>
+                        <li>Content: Event listings with dates, locations, and descriptions</li>
+                    </ul>
+                </li>
+        
+                <li><strong>Contact Page</strong>
+                    <ul>
+                        <li>Purpose: Allow users to get in touch with Kriya Kitchen for inquiries, volunteering, or donations</li>
+                        <li>Users: Community members, potential volunteers, donors, or anyone with questions</li>
+                        <li>Content: Contact form, email address, and phone number</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="dynamic-functionality">
+            <h2> Dynamic Functionality</h2>
+            <h3>Desired Dynamic</h3>
+            <p>I plan to add an <strong>Interactive Image Carousel</strong> that lets users look through multiple food events. The carousel will include navigation controls, so users can scroll through the images either automatically or by clicking "next" and "previous" buttons.</p>
+        
+            <h3>Purpose</h3>
+            <p>The purpose of the <strong>Image Carousel</strong> is to display various photos, like the restaurant's dishes, in an easy-to-use way. This feature gives users a chance to see more images without taking up too much space on the page, making the website more interactive for users.</p>
+        </section>
+       
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js">
+    </script>
+    <script>
+        $(function() {
+            $(".gallery img").click(function() {
+                $(this).toggleClass("enlarge");
+            });
+        });
+    </script>
+</body>
+</html>
