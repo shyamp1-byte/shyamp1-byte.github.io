@@ -160,3 +160,41 @@ img {
     display: block; 
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0ead6;
+}
+
+header, footer {
+    background-color: #5d473a;
+    color: #f4f1e3;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #f4f1e3;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #5d473a;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #d1b490;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5d473a;
+    color: #f4f1e3;
+}

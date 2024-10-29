@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Scripts</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/defaultscripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="firstscripts.html">First Scripts</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Welcome to Panther Express</h1>
+        <h3 id="dateTimeDisplay"></h3>
+
+        <section>
+            <h2>Get to Know You</h2>
+            <form id="userInfoForm">
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" required>
+
+                <label for="userMood">How are you feeling?</label>
+                <input type="text" id="userMood" required>
+
+                <label for="favoriteNumber">Your favorite number (0-10):</label>
+                <input type="number" id="favoriteNumber" min="0" max="10" required>
+
+                <button type="button" onclick="greetUser()">Submit</button>
+            </form>
+
+            <p id="greetingMessage"></p>
+        </section>
+
+        <section>
+            <h2>Try Our Panther Powers!</h2>
+            <button onclick="pantherSpeed()">Speed Boost</button>
+            <button onclick="pantherStrength()">Strength Surge</button>
+            <button onclick="pantherStealth()">Stealth Mode</button>
+            <button onclick="pantherRoar()">Roar Loudly</button>
+            <button onclick="pantherWisdom()">Share Wisdom</button>
+        </section>
+    </main>
+
+    <footer>
+        <a id="htmlValidator" href="#" target="_blank">HTML Validator</a>
+        <a id="cssValidator" href="#" target="_blank">CSS Validator</a>
+    </footer>
+</body>
+</html>

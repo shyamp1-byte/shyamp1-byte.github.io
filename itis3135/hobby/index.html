@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyam's Music</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0f1a;
+    color: #e0e0e0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, footer {
+    width: 100%;
+    background-color: #1c1c2d;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    color: #9900f2;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+}
+
+nav a {
+    color: #9900f2;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+main {
+    width: 80%;
+    margin-top: 20px;
+}
+
+section {
+    display: none;
+    padding: 20px;
+    background-color: #1a1a28;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+section.active {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+h2 {
+    color: #0187ce;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+figure img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+}
+
+figcaption {
+    color: #a0a0b0;
+    font-style: italic;
+    margin-top: 8px;
+    font-size: 0.9em;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    background-color: #9900f2;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.button-link:hover {
+    background-color: #009bb3;
+    transform: scale(1.05);
+}
+
+footer .validation-buttons {
+    margin-top: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #9900f2;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body onload="showSection('home')">
+
+    <header>
+        <h1>Shyam's Music Journey</h1>
+        <nav>
+            <a href="#" onclick="showSection('home')">🏠 Home</a> |
+            <a href="#" onclick="showSection('about')">🎤 About Me</a> |
+            <a href="#" onclick="showSection('times')">⏰ Best Times</a> |
+            <a href="#" onclick="showSection('locations')">📍 Best Locations</a> |
+            <a href="#" onclick="showSection('how')">🎼 How I Make Music</a> |
+            <a href="#" onclick="showSection('why')">❤️ Why I Make Music</a>
+         </nav>         
+    </header>
+
+    <main>
+        <section id="home" class="active">
+            <h2>Home</h2>
+            <p>Welcome to the world of Shyam's music! Here, I share my passion for rap, from my inspirations to my favorite locations to record and more.</p>
+            <figure>
+                <img src="../hobby/images/IMG_9822.jpg" alt="Image of Shyam">
+                <figcaption>Shyam, surrounded by a scenic view, blending artistry with nature's inspiration</figcaption>
+            </figure>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>My name is Shyam, a 21-year-old hip-hop artist from Raleigh, NC. I love creating music that speaks to people from all walks of life.</p>
+            <p>My music journey began at a young age, starting with playing the Tabla (an Indian percussion instrument), and over time, I grew a passion for beats and transitioned into hip-hop. </p>
+            <figure>
+                <img src="../hobby/images/IMG_4330.jpg" alt="Shyam's passion for instruments">
+                <figcaption>Shyam, at the age of 9, playing the tabla</figcaption>
+            </figure>
+        </section>
+
+        <section id="times">
+            <h2>Best Times to Create</h2>
+            <p>I feel most inspired late at night when everything is calm, and I can focus completely on my music.</p>
+            <p>During these quiet hours, I feel more connected to my work, letting me share my truest thoughts.</p>
+            <figure>
+                <img src="../hobby/images/IMG_4116.jpg" alt="Recording studio at night">
+                <figcaption>Producing music in my home studio</figcaption>
+            </figure>
+        </section>
+
+        <section id="locations">
+            <h2>Best Locations</h2>
+            <p>Recording studios give me a great space to create. I also enjoy recording outside to find natural inspiration.</p> 
+            <p>Some of my favorite places are home studios and outdoor spots where I can feel close to nature.</p>
+            <figure>
+                <img src="../hobby/images/IMG_2205.JPG" alt="Outdoor music setup">
+                <figcaption>Recording in my outdoor setup</figcaption>
+            </figure>
+        </section>
+
+        <section id="how">
+            <h2>How I Make Music</h2>
+            <p>I create music using digital audio tools and often write my lyrics on the spot.</p> 
+            <p>My process blends the beats I make with lyrics that capture my thoughts and experiences.</p>
+            <figure>
+                <img src="../hobby/images/IMG_3116.jpg" alt="Digital Audio Workstation">
+                <figcaption>Creating beats on my digital audio workstation</figcaption>
+            </figure>
+        </section>
+
+        <section id="why">
+            <h2>Why I Make Music</h2>
+            <p>Music is a meaningful way for me to share who I am, and I love connecting with others through my songs.</p> 
+            <p>I believe music can open minds, and I hope my songs bring inspiration to those who listen.</p>
+            <figure>
+                <img src="../hobby/images/IMG_1283.JPG" alt="Shyam deeply focused on creating music">
+                <figcaption>Music is my way to connect with the world</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by <a href="../pedibhotlaincorporated.co" class="button-link">Pedibhotla Incorporated</a></p>
+        <div class="validation-buttons">
+            <a href="https://validator.w3.org/" class="button-link">HTML</a>
+            <a href="https://jigsaw.w3.org/css-validator/" class="button-link">CSS</a>
+        </div>
+    </footer>
+
+</body>
+</html>
