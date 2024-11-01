@@ -17,7 +17,7 @@ header {
 h1 {
     margin: 0;
     font-size: 2.5em;
-    color: hsla(40, 76%, 46%, 0.692); 
+    color: hsla(40, 76%, 46%, 0.692);
 }
 
 header p {
@@ -57,7 +57,7 @@ main {
 
 h2 {
     margin-top: 0;
-    color: #474646; 
+    color: #474646;
     font-size: 2em;
 }
 
@@ -66,10 +66,10 @@ section {
 }
 
 h3 {
-    border-bottom: 3px solid #656e6e; 
+    border-bottom: 3px solid #656e6e;
     padding-bottom: 10px;
     margin-bottom: 15px;
-    color: #656e6e; 
+    color: #656e6e;
     font-size: 1.5em;
 }
 
@@ -141,7 +141,7 @@ img {
 }
 
 .gallery .enlarge {
-    transform: scale(1.5)
+    transform: scale(1.5);
 }
 
 .sitemap-image {
@@ -152,7 +152,7 @@ img {
     display: block; 
 }
 
-.wireframe-image{
+.wireframe-image {
     width: 100%; 
     max-width: 800px; 
     height: auto;
@@ -160,41 +160,81 @@ img {
     display: block; 
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0ead6;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-header, footer {
-    background-color: #5d473a;
-    color: #f4f1e3;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    margin: 0 10px;
-    color: #f4f1e3;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
-}
-
-h1, h2 {
+label {
+    font-weight: bold;
     color: #5d473a;
 }
 
-button {
-    margin: 5px;
+input[type="text"],
+input[type="file"],
+textarea {
     padding: 10px;
-    background-color: #d1b490;
-    border: none;
-    cursor: pointer;
+    border: 1px solid #b49b74;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #d1b490;
+    outline: none;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+    padding: 10px 15px;
+    background-color: #d1b490;
+    color: #3e3e3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
 button:hover {
     background-color: #5d473a;
     color: #f4f1e3;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #b49b74;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    form {
+        gap: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="text"],
+    textarea {
+        font-size: 0.8em;
+    }
+
+    input[type="submit"],
+    input[type="reset"],
+    button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
 }
