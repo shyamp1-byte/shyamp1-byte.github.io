@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Kriya Kitchen</title>
+    <link rel="stylesheet" href="../styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components2/header2.html"></div>
+    </header>
+    <main>
+        <section id="menu-list">
+            <h1>Our Menu</h1>
+            <p>Discover the delicious meals Kriya Kitchen offers:</p>
+            <ul>
+                <li><strong>Vegetable Curry</strong> – A hearty mix of fresh vegetables in a flavorful curry sauce.</li>
+                <li><strong>Chana Masala</strong> – Chickpeas simmered with spices and tomatoes.</li>
+                <li><strong>Rice Pilaf</strong> – Fragrant basmati rice cooked with mild spices.</li>
+                <li><strong>Samosas</strong> – Crispy pastry filled with spiced potatoes and peas.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div data-include="components2/footer2.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js">
+    </script>
+    <script>
+        $(function() {
+            $(".gallery img").click(function() {
+                $(this).toggleClass("enlarge");
+            });
+        });
+    </script>
+</body>
+</ht

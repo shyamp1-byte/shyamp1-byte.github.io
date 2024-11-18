@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Kriya Kitchen</title>
+    <link rel="stylesheet" href="../styles/default.css">
+</head>
+<body>
+    <header>
+        <div data-include="components2/header2.html"></div>
+    </header>
+    <main>
+        <section id="upcoming-events">
+            <h1>Upcoming Events</h1>
+            <p>Join us for community events and volunteer opportunities:</p>
+            <ul>
+                <li><strong>Community Cookout</strong> – June 15, 2024: An open event to meet volunteers and support our mission.</li>
+                <li><strong>Food Drive</strong> – July 10, 2024: Help collect and distribute essential food items.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div data-include="components2/footer2.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js">
+    </script>
+    <script>
+        $(function() {
+            $(".gallery img").click(function() {
+                $(this).toggleClass("enlarge");
+            });
+        });
+    </script>
+</body>
+</html
