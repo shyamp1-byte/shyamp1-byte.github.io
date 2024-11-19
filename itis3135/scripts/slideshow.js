@@ -1,6 +1,10 @@
 $(document).ready(function() {
+    console.log("jQuery Loaded");
+
     let currentSlide = 0;
     const slides = $(".slides");
+
+    console.log("Slides: ", slides);
 
     function showSlide(index) {
         slides.hide();
@@ -14,3 +18,4 @@ $(document).ready(function() {
         showSlide(currentSlide);
     }, 3000);
 });
+
