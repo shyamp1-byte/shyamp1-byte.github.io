@@ -238,3 +238,46 @@ button:hover {
         font-size: 0.9em;
     }
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+    text-align: center;
+}
+
+.caption {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
+
+nav {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+nav ul {
+    display: inline-flex; 
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline; 
+}
