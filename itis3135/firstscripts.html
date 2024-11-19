@@ -5,52 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Scripts</title>
     <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <script src="scripts/defaultscripts.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="firstscripts.html">First Scripts</a>
-        </nav>
+        <div data-include="components/header.html"></div>
     </header>
     
     <main>
         <h1>Welcome to Panther Express</h1>
-        <h3 id="dateTimeDisplay"></h3>
+        <h3 id="date-time-display"></h3>
 
         <section>
             <h2>Get to Know You</h2>
-            <form id="userInfoForm">
+            <form id="user-info-form">
                 <label for="userName">Your Name:</label>
-                <input type="text" id="userName" required>
+                <input type="text" id="user-name" required>
 
                 <label for="userMood">How are you feeling?</label>
-                <input type="text" id="userMood" required>
+                <input type="text" id="user-mood" required>
 
                 <label for="favoriteNumber">Your favorite number (0-10):</label>
-                <input type="number" id="favoriteNumber" min="0" max="10" required>
+                <input type="number" id="favorite-number" min="0" max="10" required>
 
-                <button type="button" onclick="greetUser()">Submit</button>
+                <button type="button" id="submit-button">Submit</button>
+
             </form>
 
-            <p id="greetingMessage"></p>
+            <p id="greeting-message"></p>
         </section>
 
         <section>
             <h2>Try Our Panther Powers!</h2>
-            <button onclick="pantherSpeed()">Speed Boost</button>
-            <button onclick="pantherStrength()">Strength Surge</button>
-            <button onclick="pantherStealth()">Stealth Mode</button>
-            <button onclick="pantherRoar()">Roar Loudly</button>
-            <button onclick="pantherWisdom()">Share Wisdom</button>
+                <button id="speed-boost-btn">Speed Boost</button>
+                <button id="strength-surge-btn">Strength Surge</button>
+                <button id="stealth-mode-btn">Stealth Mode</button>
+                <button id="roar-loudly-btn">Roar Loudly</button>
+                <button id="share-wisdom-btn">Share Wisdom</button>
+
         </section>
     </main>
 
     <footer>
-        <a id="htmlValidator" href="#" target="_blank">HTML Validator</a>
-        <a id="cssValidator" href="#" target="_blank">CSS Validator</a>
+        <div data-include="components/footer.html"></div>
     </footer>
+    <script src="scripts/HTMLInclude.min.js">
+    </script>
 </body>
 </html>

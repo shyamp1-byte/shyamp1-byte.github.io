@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Kriya Kitchen</title>
     <link rel="stylesheet" href="../styles/default.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
     <header>
@@ -14,12 +16,8 @@
         <section id="menu-list">
             <h1>Our Menu</h1>
             <p>Discover the delicious meals Kriya Kitchen offers:</p>
-            <ul>
-                <li><strong>Vegetable Curry</strong> – A hearty mix of fresh vegetables in a flavorful curry sauce.</li>
-                <li><strong>Chana Masala</strong> – Chickpeas simmered with spices and tomatoes.</li>
-                <li><strong>Rice Pilaf</strong> – Fragrant basmati rice cooked with mild spices.</li>
-                <li><strong>Samosas</strong> – Crispy pastry filled with spiced potatoes and peas.</li>
-            </ul>
+            <img src="../images/Menu1.jpg" alt="Front Side of Menu">
+            <img src="../images/Menu2.jpg" alt="Back Side of Menu">
         </section>
     </main>
     <footer>
@@ -33,6 +31,8 @@
                 $(this).toggleClass("enlarge");
             });
         });
-    </script>
-</body>
-</html>
+
+        document.querySelectorAll('[data-include]').forEach(function(el) {
+            fetch(el.getAttribute('data-include'))
+                .then(response => response.text())
+                .then(data => {

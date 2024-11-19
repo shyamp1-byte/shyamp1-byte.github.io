@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events - Kriya Kitchen</title>
     <link rel="stylesheet" href="../styles/default.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
     <header>
@@ -30,6 +32,17 @@
             $(".gallery img").click(function() {
                 $(this).toggleClass("enlarge");
             });
+        });
+
+        document.querySelectorAll('[data-include]').forEach(function(el) {
+            fetch(el.getAttribute('data-include'))
+                .then(response => response.text())
+                .then(data => {
+                    el.innerHTML = data;
+                })
+                .catch(err => {
+                    console.error('Failed to include HTML:', err);
+                });
         });
     </script>
 </body>

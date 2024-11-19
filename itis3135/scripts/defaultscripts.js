@@ -1,3 +1,15 @@
+function showFavoritePolygon() {
+    const numberInput = document.getElementById("favoriteNumber").value;
+    const number = Math.abs(Math.round(numberInput));
+    const polygonNames = ["", "Henagon", "Digon", "Trigon", "Tetragon", "Pentagon", "Hexagon", "Heptagon", "Octagon", "Nonagon", "Decagon"];
+
+    if (number >= 0 && number <= 10) {
+        alert(`A shape with ${number} sides is called a ${polygonNames[number]}.`);
+    } else {
+        alert("Please enter a number between 0 and 10.");
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const dateTimeDisplay = document.getElementById("dateTimeDisplay");
     const now = new Date();
@@ -15,23 +27,11 @@ function greetUser() {
     const greetingMessage = document.getElementById("greetingMessage");
     greetingMessage.innerText = `The Panther Express welcomes you, ${userName}! We're glad you are doing ${userMood}.`;
 
-    showFavoritePolygon();
-}
-
-function showFavoritePolygon() {
-    const numberInput = document.getElementById("favoriteNumber").value;
-    const number = Math.abs(Math.round(numberInput));
-    const polygonNames = ["", "Henagon", "Digon", "Trigon", "Tetragon", "Pentagon", "Hexagon", "Heptagon", "Octagon", "Nonagon", "Decagon"];
-
-    if (number >= 0 && number <= 10) {
-        alert(`A shape with ${number} sides is called a ${polygonNames[number]}.`);
-    } else {
-        alert("Please enter a number between 0 and 10.");
-    }
+    showFavoritePolygon();  
 }
 
 function pantherSpeed() {
-    alert("Panther Speed activated! You’re moving at lightning pace!");
+    alert("Panther Speed activated! You're moving at lightning pace!");
 }
 
 function pantherStrength() {
