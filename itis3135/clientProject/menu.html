@@ -14,9 +14,11 @@
             width: 300px;
             transition: transform 0.3s;
         }
+
         #menu-list img:hover {
             transform: scale(1.1);
         }
+
         .lightbox {
             display: none;
             position: fixed;
@@ -29,16 +31,19 @@
             align-items: center;
             z-index: 1000;
         }
+
         .lightbox img {
             max-width: 90%;
             max-height: 90%;
         }
-        .lightbox {
-            display: block;
-        }
 
-        .is-closed .lightbox {
-            display: none;
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -56,14 +61,21 @@
         </section>
     </main>
     <div class="lightbox">
+        <span class="close">&times;</span>
         <img src="../images/Menu1.jpg" alt="Enlarged Front Side">
         <img src="../images/Menu2.jpg" alt="Enlarged Back Side">
     </div>
+    
     <footer>
         <div data-include="components2/footer2.html"></div>
     </footer>
     <script src="scripts/HTMLInclude.min.js"></script>
     <script>
+
+        $(".lightbox .close").click(function() {
+            $(".lightbox").fadeOut();
+        });
+
         $(function() {
             $(".menu-img").click(function() {
                 $(".lightbox img").attr("src", $(this).attr("src"));
