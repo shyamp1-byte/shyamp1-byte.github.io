@@ -6,7 +6,7 @@
     <title>BYO Intro</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script src="Scripts/survey.js" defer></script>
+    <script src="scripts/survey.js" defer></script>
 </head>
 <body>
     <header>
@@ -16,7 +16,7 @@
     <main>
         <h2>BYO Intro</h2>
         <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
-        <form id="introForm">
+        <form id="intro-form">
             <label for="name">Name:</label>
             <input type="text" id="name" value="Your Name" required>
             
@@ -26,35 +26,35 @@
             <label for="image">Image:</label>
             <input type="file" id="image" accept=".png, .jpg" required>
             
-            <label for="imageCaption">Image Caption:</label>
-            <input type="text" id="imageCaption" value="Your Caption" required>
+            <label for="image-caption">Image Caption:</label>
+            <input type="text" id="image-caption" value="Your Caption" required>
             
-            <label for="personalBackground">Personal Background:</label>
-            <textarea id="personalBackground" required>Your Background</textarea>
+            <label for="personal-background">Personal Background:</label>
+            <textarea id="personal-background" required>Your Background</textarea>
             
-            <label for="professionalBackground">Professional Background:</label>
-            <textarea id="professionalBackground" required>Your Professional Background</textarea>
+            <label for="professional-background">Professional Background:</label>
+            <textarea id="professional-background" required>Your Professional Background</textarea>
             
-            <label for="academicBackground">Academic Background:</label>
-            <textarea id="academicBackground" required>Your Academic Background</textarea>
+            <label for="academic-background">Academic Background:</label>
+            <textarea id="academic-background" required>Your Academic Background</textarea>
             
-            <label for="webDevelopment">Background in Web Development:</label>
-            <textarea id="webDevelopment" required>Your Background</textarea>
+            <label for="web-development">Background in Web Development:</label>
+            <textarea id="web-development" required>Your Background</textarea>
             
-            <label for="computerPlatform">Primary Computer Platform:</label>
-            <input type="text" id="computerPlatform" required>Your Platform
+            <label for="computer-platform">Primary Computer Platform:</label>
+            <input type="text" id="computer-platform" required>Your Platform
             
-            <div id="coursesContainer">
+            <div id="courses-container">
                 <label>Courses Currently Taking:</label>
                 <input type="text" class="course" placeholder="Enter course name">
-                <button type="button" onclick="addCourse()">Add Course</button>
+                <div id="result" class="hidden"></div>
             </div>
 
-            <label for="funnyThing">Funny Thing:</label>
-            <textarea id="funnyThing"></textarea>
+            <label for="funny-thing">Funny Thing:</label>
+            <textarea id="funny-thing"></textarea>
             
-            <label for="anythingElse">Anything Else?</label>
-            <textarea id="anythingElse"></textarea>
+            <label for="anything-else">Anything Else?</label>
+            <textarea id="anything-else"></textarea>
             
             <input type="checkbox" id="agreement" required>
             <label for="agreement">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label>
@@ -63,8 +63,8 @@
             <input type="reset" value="Reset">
         </form>
 
-        <div id="result" style="display:none;"></div>
-        <a href="#" id="resetLink" style="display:none;">Reset</a>
+        <div class="result hidden"></div>
+        <a href="#" id="reset-link" class="hidden">Reset</a>
     </main>
 
     <footer>

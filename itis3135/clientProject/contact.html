@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../styles/default.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
@@ -44,13 +46,13 @@
 
         document.querySelectorAll('[data-include]').forEach(function(el) {
             fetch(el.getAttribute('data-include'))
-                .then(response => response.text())
-                .then(data => {
-                    el.innerHTML = data;
-                })
-                .catch(err => {
-                    console.error('Failed to include HTML:', err);
-                });
+            .then((response) => response.text())
+            .then((data) => {
+                el.innerHTML = data;
+            })
+            .catch((err) => {
+                console.error('Failed to include HTML:', err);
+            });
         });
 
         document.getElementById('theme-toggle').addEventListener('click', function() {

@@ -1,14 +1,9 @@
-document.getElementById('introForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-    if (validateForm()) {
-        displayResults();
-    }
-});
-
 function validateForm() {
-    const fields = ['name', 'mascot', 'image', 'imageCaption', 'personalBackground', 
-                    'professionalBackground', 'academicBackground', 
-                    'webDevelopment', 'computerPlatform', 'agreement'];
+    const fields = [
+        'name', 'mascot', 'image', 'imageCaption', 'personalBackground',
+        'professionalBackground', 'academicBackground', 'webDevelopment',
+        'computerPlatform', 'agreement'
+    ];
     for (let field of fields) {
         if (!document.getElementById(field).value) {
             alert(`${field.charAt(0).toUpperCase() + field.slice(1)} is required.`);
@@ -19,8 +14,8 @@ function validateForm() {
 }
 
 function displayResults() {
-    const resultDiv = document.getElementById('result');
-    resultDiv.style.display = 'block';
+    const resultDiv = document.querySelector('.result');
+    resultDiv.classList.remove('hidden');
     resultDiv.innerHTML = `
         <h2>Your Introduction Page</h2>
         <p>Name: ${document.getElementById('name').value}</p>
@@ -32,17 +27,26 @@ function displayResults() {
         <p>Academic Background: ${document.getElementById('academicBackground').value}</p>
         <p>Background in Web Development: ${document.getElementById('webDevelopment').value}</p>
         <p>Primary Computer Platform: ${document.getElementById('computerPlatform').value}</p>
-        <p>Courses: ${Array.from(document.getElementsByClassName('course')).map(c => c.value).join(', ')}</p>
+        <p>Courses: ${Array.from(document.getElementsByClassName('course')).map((c) => c.value).join(', ')}</p>
         <p>Funny Thing: ${document.getElementById('funnyThing').value}</p>
         <p>Anything Else?: ${document.getElementById('anythingElse').value}</p>
     `;
     document.getElementById('resetLink').style.display = 'block';
 }
 
-document.getElementById('resetLink').addEventListener('click', function() {
+document.getElementById('resetLink').addEventListener('click', function () {
     document.getElementById('introForm').reset();
-    document.getElementById('result').style.display = 'none';
+    const resultDiv = document.querySelector('.result');
+    resultDiv.classList.add('hidden');
     this.style.display = 'none';
+});
+
+
+document.getElementById('introForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (validateForm()) {
+        displayResults();
+    }
 });
 
 function addCourse() {
@@ -51,15 +55,16 @@ function addCourse() {
     newCourseInput.type = 'text';
     newCourseInput.className = 'course';
     newCourseInput.placeholder = 'Enter course name';
-    
+
     const deleteButton = document.createElement('button');
     deleteButton.type = 'button';
     deleteButton.innerText = 'Delete';
-    deleteButton.onclick = function() {
+    deleteButton.onclick = function () {
         coursesContainer.removeChild(newCourseInput);
         coursesContainer.removeChild(deleteButton);
     };
-
     coursesContainer.appendChild(newCourseInput);
     coursesContainer.appendChild(deleteButton);
 }
+
+document.getElementById('addCourseBtn').addEventListener('click', addCourse);

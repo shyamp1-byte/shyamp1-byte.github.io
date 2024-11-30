@@ -16,8 +16,11 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2.5em;
     color: hsla(40, 76%, 46%, 0.692);
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ac6b11;
+    margin-bottom: 30px;
 }
 
 header p {
@@ -292,8 +295,6 @@ nav ul li {
 }
 
 #menu-list img {
-    width: 2000px;
-    height: auto;
     margin: 20px;
     border: 10px solid #f5f5f5;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -304,25 +305,6 @@ nav ul li {
 #menu-list img:hover {
     transform: scale(1.15);
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.accordion {
-    background-color: #f1f1f1;
-    color: #333;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 18px;
-    transition: background-color 0.3s, transform 0.3s;
-    border-radius: 8px;
-}
-
-.accordion:hover {
-    background-color: #ddd;
-    transform: scale(1.05);
 }
 
 .accordion-content {
@@ -345,13 +327,6 @@ nav ul li {
 
 .accordion-content img:hover {
     transform: scale(1.05);
-}
-
-h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #ac6b11;
-    margin-bottom: 30px;
 }
 
 #about-info {
@@ -394,7 +369,7 @@ main.dark-mode {
 }
 
 button.theme-button {
-    background-color: #fff;
+    background-color: #d1b490;
     color: #333;
     border: 2px solid #333;
     padding: 10px 20px;
@@ -404,53 +379,62 @@ button.theme-button {
 }
 
 button.theme-button:hover {
-    background-color: #f1f1f1;
+    background-color: #ba4848;
+    color: #fff;
 }
 
-button.theme-button.dark-mode {
+body.dark-mode button.theme-button {
     background-color: #333;
     color: #fff;
     border: 2px solid #fff;
 }
 
-button.theme-button.dark-mode:hover {
+body.dark-mode button.theme-button:hover {
     background-color: #444;
 }
+
 
 .accordion {
     background-color: #f1f1f1;
     color: #333;
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    width: 100%;
-}
-
-.accordion-content {
     padding: 10px;
-    display: none;
-    background-color: #fff;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 8px;
 }
 
-.accordion.active {
+
+.accordion:focus {
+    box-shadow: 0 0 0 3px #007bff;
+}
+
+.accordion:hover {
+    background-color: #ddd;
+}
+
+.accordion:active {
     background-color: #ccc;
 }
 
-.accordion.dark-mode {
+
+.dark-mode .accordion {
     background-color: #444;
     color: #fff;
 }
 
-.accordion-content.dark-mode {
+.dark-mode .accordion-content {
     background-color: #555;
     color: #fff;
 }
 
-.lightbox.dark-mode {
+.lightbox {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.dark-mode .lightbox {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -467,9 +451,14 @@ button.theme-button.dark-mode:hover {
     color: inherit;
 }
 
-#mission-statement h2, p {
+#mission-statement {
     color: inherit;
 }
+
+#mission-statement p {
+    color: inherit;
+}
+
 
 #contact-form form, label, input {
     color: inherit;
@@ -518,4 +507,24 @@ body.dark-mode input[type="text"]:focus,
 body.dark-mode input[type="email"]:focus,
 body.dark-mode textarea:focus {
     border-color: #d1b490;
+}
+
+.image-style {
+    width: 400px;
+    height: auto;
+}
+
+.comic-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.comic-list li {
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
 }
