@@ -11,6 +11,7 @@
 <body>
     <header>
         <div data-include="components2/header2.html"></div>
+        <button id="theme-toggle" class="theme-button">Switch to Dark Mode</button>
     </header>
     <main>
         <section id="contact-form">
@@ -50,6 +51,17 @@
                 .catch(err => {
                     console.error('Failed to include HTML:', err);
                 });
+        });
+
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('main').classList.toggle('dark-mode');
+            document.querySelector('#contact-form').classList.toggle('dark-mode'); 
+                    if (document.body.classList.contains('dark-mode')) {
+                this.textContent = 'Switch to Light Mode';
+            } else {
+             this.textContent = 'Switch to Dark Mode';
+            }
         });
     </script>
 </body>

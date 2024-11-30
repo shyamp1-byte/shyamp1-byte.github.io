@@ -305,3 +305,217 @@ nav ul li {
     transform: scale(1.15);
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
 }
+
+.accordion {
+    background-color: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 8px;
+}
+
+.accordion:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+.accordion-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    border-left: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.accordion-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordion-content img:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ac6b11;
+    margin-bottom: 30px;
+}
+
+#about-info {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+main.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+button.theme-button {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+button.theme-button:hover {
+    background-color: #f1f1f1;
+}
+
+button.theme-button.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+button.theme-button.dark-mode:hover {
+    background-color: #444;
+}
+
+.accordion {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.accordion-content {
+    padding: 10px;
+    display: none;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.accordion.active {
+    background-color: #ccc;
+}
+
+.accordion.dark-mode {
+    background-color: #444;
+    color: #fff;
+}
+
+.accordion-content.dark-mode {
+    background-color: #555;
+    color: #fff;
+}
+
+.lightbox.dark-mode {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#about-info.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#about-info p {
+    color: inherit;
+}
+
+#welcome-section p {
+    color: inherit;
+}
+
+#mission-statement h2, p {
+    color: inherit;
+}
+
+#contact-form form, label, input {
+    color: inherit;
+}
+
+.menu-img {
+    transition: transform 0.3s;
+}
+
+.menu-img:hover {
+    transform: scale(1.1);
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b49b74;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #d1b490;
+    outline: none;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode textarea {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="email"]:focus,
+body.dark-mode textarea:focus {
+    border-color: #d1b490;
+}

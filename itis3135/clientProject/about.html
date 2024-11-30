@@ -11,13 +11,24 @@
 <body>
     <header>
         <div data-include="components2/header2.html"></div>
+        <button id="theme-toggle" class="theme-button">Switch to Dark Mode</button>
     </header>
     <main>
         <section id="about-info">
             <h1>About Kriya Kitchen</h1>
             <p>Kriya Kitchen is part of the Hand in Hand USA organization, driven by dedicated volunteers to serve the community. Our focus is on creating lasting impacts through nourishment and outreach.</p>
-            <h2>Our Team</h2>
-            <p>Our volunteers come from all walks of life, united by a shared goal of service and compassion.</p>
+    
+            <h2 class="accordion">Our Mission</h2>
+            <div class="accordion-content">
+                <p>We aim to empower communities through healthy meals and outreach programs that make a difference in people's lives.</p>
+                <img src="../images/Mission.jpg" alt="Our Mission" class="accordion-image">
+            </div>
+    
+            <h2 class="accordion">Our Team</h2>
+            <div class="accordion-content">
+                <p>Meet our team member, dedicated to serving the community with heart and compassion, bringing change one meal at a time.</p>
+                <img src="../images/Team.jpg" alt="Our Team" class="accordion-image">
+            </div>
         </section>
     </main>
     <footer>
@@ -31,7 +42,7 @@
                 $(this).toggleClass("enlarge");
             });
         });
-
+    
         document.querySelectorAll('[data-include]').forEach(function(el) {
             fetch(el.getAttribute('data-include'))
                 .then(response => response.text())
@@ -42,6 +53,32 @@
                     console.error('Failed to include HTML:', err);
                 });
         });
-    </script>
+    
+        $(document).ready(function() {
+            $(".accordion").click(function() {
+                $(this).next(".accordion-content").slideToggle();
+                $(this).toggleClass("active");
+            });
+        });
+
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('main').classList.toggle('dark-mode');
+            document.querySelectorAll('.accordion').forEach(function(accordion) {
+                accordion.classList.toggle('dark-mode');
+            });
+            document.querySelectorAll('.accordion-content').forEach(function(content) {
+                content.classList.toggle('dark-mode');
+            });
+            document.querySelector('#about-info').classList.toggle('dark-mode'); 
+            document.querySelector('.lightbox').classList.toggle('dark-mode'); 
+            
+            if (document.body.classList.contains('dark-mode')) {
+                this.textContent = 'Switch to Light Mode';
+            } else {
+                this.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>    
 </body>
 </html>
