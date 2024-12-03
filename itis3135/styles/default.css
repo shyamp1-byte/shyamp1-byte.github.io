@@ -447,6 +447,18 @@ body.dark-mode button.theme-button:hover {
     color: inherit;
 }
 
+#upcoming-events p {
+    color: inherit;
+}
+
+#about-info ul {
+    color: inherit;
+}
+
+#get-involved ul {
+    color: inherit;
+}
+
 #welcome-section p {
     color: inherit;
 }
@@ -528,3 +540,4 @@ body.dark-mode textarea:focus {
 .hidden {
     display: none;
 }
+

@@ -8,7 +8,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <header>
@@ -22,16 +21,40 @@
             <p>Kriya Kitchen is a volunteer-run organization dedicated to raising funds to support those in need. We aim to connect with the community through our passion for service and great food.</p>
             <img src="../images/KriyaKitchenLogo.png" alt="Kriya Kitchen Logo">
         </section>
+        
         <section id="mission-statement">
             <h2>Our Mission</h2>
-            <p>We strive to improve lives by promoting volunteerism and offering delicious meals while fostering a sense of community and support.</p>
+            <p>We strive to improve lives by promoting volunteerism and offering delicious meals while fostering a sense of community and support. Our goal is to be a beacon of hope for those in need, through nutritious food and a compassionate network of volunteers.</p>
+        </section>
+
+        <section id="get-involved">
+            <h2>How You Can Get Involved</h2>
+            <p>There are many ways to help Kriya Kitchen make a difference. Whether you want to volunteer, donate, or spread the word, your support matters! Join our efforts to help others by contributing your time or resources.</p>
+            <ul>
+                <li><strong>Volunteer:</strong> Sign up to serve meals, organize events, or assist with outreach programs.</li>
+                <li><strong>Donate:</strong> Your donations help us provide meals and support those in need in the community.</li>
+                <li><strong>Spread the Word:</strong> Help us grow our community by sharing our mission with others.</li>
+            </ul>
+        </section>
+
+        <section id="impact">
+            <h2>Our Impact</h2>
+            <p>Over the past year, Kriya Kitchen has served thousands of meals, provided outreach programs, and supported numerous families in need. With the continued support of volunteers and donors, we aim to reach even more individuals and make a lasting difference in our community.</p>
+            <img src="../images/home.png" alt="Community Impact" class="impact-image">
+        </section>
+
+        <section id="join-us">
+            <h2>Join Us in Making a Difference</h2>
+            <p>At Kriya Kitchen, we believe in the power of community. By coming together, we can create lasting change. Learn more about our upcoming events or volunteer opportunities, and be part of something meaningful.</p>
+            <button><a href="contact.html">Contact Us</a></button>
         </section>
     </main>
+
     <footer>
         <div data-include="components2/footer2.html"></div>
     </footer>
-    <script src="scripts/HTMLInclude.min.js">
-    </script>
+
+    <script src="scripts/HTMLInclude.min.js"></script>
     <script>
         $(function() {
             $(".gallery img").click(function() {
@@ -55,10 +78,14 @@
             document.querySelector('main').classList.toggle('dark-mode');
             document.querySelector('#welcome-section').classList.toggle('dark-mode'); 
             document.querySelector('#mission-statement').classList.toggle('dark-mode'); 
-                    if (document.body.classList.contains('dark-mode')) {
+            document.querySelector('#get-involved').classList.toggle('dark-mode');
+            document.querySelector('#impact').classList.toggle('dark-mode');
+            document.querySelector('#join-us').classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
                 this.textContent = 'Switch to Light Mode';
             } else {
-             this.textContent = 'Switch to Dark Mode';
+                this.textContent = 'Switch to Dark Mode';
             }
         });
     </script>
