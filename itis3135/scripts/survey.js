@@ -1,12 +1,13 @@
 function validateForm() {
     const fields = [
-        'name', 'mascot', 'image', 'imageCaption', 'personalBackground',
-        'professionalBackground', 'academicBackground', 'webDevelopment',
-        'computerPlatform', 'agreement'
+        'name', 'mascot', 'image', 'image-caption', 'personal-background',
+        'professional-background', 'academic-background', 'web-development',
+        'computer-platform', 'agreement'
     ];
     for (let field of fields) {
-        if (!document.getElementById(field).value) {
-            alert(`${field.charAt(0).toUpperCase() + field.slice(1)} is required.`);
+        const inputElement = document.getElementById(field);
+        if (inputElement && (!inputElement.value || (inputElement.type === 'checkbox' && !inputElement.checked))) {
+            alert(`${field.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())} is required.`);
             return false;
         }
     }
@@ -20,29 +21,29 @@ function displayResults() {
         <h2>Your Introduction Page</h2>
         <p>Name: ${document.getElementById('name').value}</p>
         <p>Mascot: ${document.getElementById('mascot').value}</p>
-        <img src="${URL.createObjectURL(document.getElementById('image').files[0])}" alt="Image">
-        <p>Image Caption: ${document.getElementById('imageCaption').value}</p>
-        <p>Personal Background: ${document.getElementById('personalBackground').value}</p>
-        <p>Professional Background: ${document.getElementById('professionalBackground').value}</p>
-        <p>Academic Background: ${document.getElementById('academicBackground').value}</p>
-        <p>Background in Web Development: ${document.getElementById('webDevelopment').value}</p>
-        <p>Primary Computer Platform: ${document.getElementById('computerPlatform').value}</p>
-        <p>Courses: ${Array.from(document.getElementsByClassName('course')).map((c) => c.value).join(', ')}</p>
-        <p>Funny Thing: ${document.getElementById('funnyThing').value}</p>
-        <p>Anything Else?: ${document.getElementById('anythingElse').value}</p>
+        <img src="${URL.createObjectURL(document.getElementById('image').files[0])}" alt="Uploaded Image">
+        <p>Image Caption: ${document.getElementById('image-caption').value}</p>
+        <p>Personal Background: ${document.getElementById('personal-background').value}</p>
+        <p>Professional Background: ${document.getElementById('professional-background').value}</p>
+        <p>Academic Background: ${document.getElementById('academic-background').value}</p>
+        <p>Background in Web Development: ${document.getElementById('web-development').value}</p>
+        <p>Primary Computer Platform: ${document.getElementById('computer-platform').value}</p>
+        <p>Courses: ${Array.from(document.querySelectorAll('.course')).map((c) => c.value).join(', ')}</p>
+        <p>Funny Thing: ${document.getElementById('funny-thing').value}</p>
+        <p>Anything Else?: ${document.getElementById('anything-else').value}</p>
     `;
-    document.getElementById('resetLink').style.display = 'block';
+    document.getElementById('reset-link').classList.remove('hidden');
 }
 
-document.getElementById('resetLink').addEventListener('click', function () {
-    document.getElementById('introForm').reset();
+document.getElementById('reset-link').addEventListener('click', function (event) {
+    event.preventDefault();
+    document.getElementById('intro-form').reset();
     const resultDiv = document.querySelector('.result');
     resultDiv.classList.add('hidden');
-    this.style.display = 'none';
+    this.classList.add('hidden');
 });
 
-
-document.getElementById('introForm').addEventListener('submit', function (event) {
+document.getElementById('intro-form').addEventListener('submit', function (event) {
     event.preventDefault();
     if (validateForm()) {
         displayResults();
@@ -50,7 +51,7 @@ document.getElementById('introForm').addEventListener('submit', function (event)
 });
 
 function addCourse() {
-    const coursesContainer = document.getElementById('coursesContainer');
+    const coursesContainer = document.getElementById('courses-container');
     const newCourseInput = document.createElement('input');
     newCourseInput.type = 'text';
     newCourseInput.className = 'course';
@@ -67,4 +68,7 @@ function addCourse() {
     coursesContainer.appendChild(deleteButton);
 }
 
-document.getElementById('addCourseBtn').addEventListener('click', addCourse);
+const addCourseBtn = document.getElementById('addCourseBtn');
+if (addCourseBtn) {
+    addCourseBtn.addEventListener('click', addCourse);
+}
