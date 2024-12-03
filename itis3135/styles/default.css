@@ -471,6 +471,21 @@ body.dark-mode button.theme-button:hover {
     color: inherit;
 }
 
+#impact p {
+    color: inherit;
+}
+
+#join-us p {
+    color: inherit;
+}
+
+#contact-form p {
+    color: inherit;
+}
+
+#get-involved p {
+    color: inherit;
+}
 
 #contact-form form, label, input {
     color: inherit;
