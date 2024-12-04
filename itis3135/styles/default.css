@@ -483,6 +483,10 @@ body.dark-mode button.theme-button:hover {
     color: inherit;
 }
 
+#past-events p {
+    color: inherit;
+}
+
 #get-involved p {
     color: inherit;
 }

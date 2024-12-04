@@ -38,12 +38,23 @@
                 </div>
             </div>
         </section>
+
+        <section id="past-events">
+            <h1>Past Events</h1>
+            <p>Take a look at some of our previous events:</p>
+            <div class="event-card">
+                <div>
+                    <h2>Launch Event</h2>
+                    <p><strong>Date:</strong> November 28, 2023</p>
+                    <p>Since launching in April 2023 in the Cary, NC area, we are proud to have raised $1,303. We deeply appreciate the generous support from our community.</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div data-include="components2/footer2.html"></div>
     </footer>
-    <script src="scripts/HTMLInclude.min.js">
-    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
     <script>
         $(function() {
             $(".gallery img").click(function() {
@@ -65,10 +76,10 @@
         document.getElementById('theme-toggle').addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
             document.querySelector('main').classList.toggle('dark-mode');
-                    if (document.body.classList.contains('dark-mode')) {
+            if (document.body.classList.contains('dark-mode')) {
                 this.textContent = 'Switch to Light Mode';
             } else {
-             this.textContent = 'Switch to Dark Mode';
+                this.textContent = 'Switch to Dark Mode';
             }
         });
     </script>
