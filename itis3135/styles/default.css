@@ -560,3 +560,14 @@ body.dark-mode textarea:focus {
     display: none;
 }
 
+
+.tagline {
+    color: white;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 250px; 
+    height: 40px; 
+    box-sizing: border-box;
+}

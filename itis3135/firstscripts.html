@@ -11,6 +11,7 @@
 <body>
     <header>
         <div data-include="components/header.html"></div>
+        <p class="tagline">"Unleash Your Inner Panther!"</p>
     </header>
     
     <main>
@@ -20,37 +21,33 @@
         <section>
             <h2>Get to Know You</h2>
             <form id="user-info-form">
-                <label for="userName">Your Name:</label>
+                <label for="user-name">Your Name:</label>
                 <input type="text" id="user-name" required>
 
-                <label for="userMood">How are you feeling?</label>
+                <label for="user-mood">How are you feeling?</label>
                 <input type="text" id="user-mood" required>
 
-                <label for="favoriteNumber">Your favorite number (0-10):</label>
+                <label for="favorite-number">Your favorite number (0-10):</label>
                 <input type="number" id="favorite-number" min="0" max="10" required>
 
                 <button type="button" id="submit-button">Submit</button>
-
             </form>
-
             <p id="greeting-message"></p>
         </section>
 
         <section>
             <h2>Try Our Panther Powers!</h2>
-                <button id="speed-boost-btn">Speed Boost</button>
-                <button id="strength-surge-btn">Strength Surge</button>
-                <button id="stealth-mode-btn">Stealth Mode</button>
-                <button id="roar-loudly-btn">Roar Loudly</button>
-                <button id="share-wisdom-btn">Share Wisdom</button>
-
+            <button id="speed-boost-btn">Speed Boost</button>
+            <button id="strength-surge-btn">Strength Surge</button>
+            <button id="stealth-mode-btn">Stealth Mode</button>
+            <button id="roar-loudly-btn">Roar Loudly</button>
+            <button id="share-wisdom-btn">Share Wisdom</button>
         </section>
     </main>
 
     <footer>
         <div data-include="components/footer.html"></div>
     </footer>
-    <script src="scripts/HTMLInclude.min.js">
-    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
