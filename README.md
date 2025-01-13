@@ -1,6 +1,6 @@
-# shyamp1-byte.github.io
+# ITIS 3135 UNCC
 
-This repository contains the code for a website I created as part of a class project. The website serves as a showcase of my work and skills, highlighting various projects I completed during the course. It includes details about me, the tools and technologies I used, and an interactive portfolio of my accomplishments.
+- This repository contains the code for a website I created as part of a class project. The website serves as a showcase of my work and skills, highlighting various projects I completed during the course. It includes details about me, the tools and technologies I used, and an interactive portfolio of my accomplishments.
 
 # What did I learn?
 
